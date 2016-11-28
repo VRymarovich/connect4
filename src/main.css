@@ -1,0 +1,43 @@
+#content {
+  font-size:20px;
+  //text-align: center;
+}
+#field{
+  width:315px;
+  height:270px;
+  background-color: #3f29ef;
+  border-radius: 10px;
+  position: absolute;
+}
+#page{
+}
+.cell{
+  width:35px;
+  height:35px;
+  border-radius: 20px;
+}
+.available{
+  background-color: #ffffff;
+  cursor:pointer;
+}
+.na{
+  background-color: #b4afaf;
+}
+.red{
+  background-color: red;
+}
+.yellow{
+  background-color: yellow;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
