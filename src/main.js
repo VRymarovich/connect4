@@ -39,7 +39,7 @@ function click(event){
             logic.updateField(event.target, cells);
         }else{
             document.getElementById('content').innerHTML = 'Player '+options.players[player].name+' wins!';
-            logic.showWinnerCells(event.target, fieldStatus);
+            graphics.showWinnerCells(event.target, fieldStatus);
         }
     }
 }
