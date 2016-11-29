@@ -19,7 +19,7 @@ addEventListeners();
 
 //set initial field state
 var player = 0;
-logic.setInitialField(cells, options.horizontal-1);
+graphics.setInitialField(options.horizontal-1);
 
 //events
 function mouseOver(event){
@@ -36,7 +36,7 @@ function click(event){
         var fieldStatus = logic.checkField(field, player, options.players, event.target.attributes);
         if(fieldStatus==0){
             player = logic.changePlayer(player);
-            logic.updateField(event.target, cells);
+            graphics.updateField(event.target);
         }else{
             document.getElementById('content').innerHTML = 'Player '+options.players[player].name+' wins!';
             graphics.showWinnerCells(event.target, fieldStatus);
@@ -46,13 +46,6 @@ function click(event){
 
 function restart(){
     player = 0;
-    logic.setInitialField(cells, 6);
+    logic.setInitialField(6);
 }
-//functions
-function addEventListeners(){
-    for(var i=0;i<cells.length;i++){
-        cells[i].addEventListener('mouseover', mouseOver);
-        cells[i].addEventListener('click', click);
-    };
-    document.getElementById('restart').addEventListener('click', restart);
-}
+
