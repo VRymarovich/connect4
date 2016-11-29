@@ -28,9 +28,18 @@ module.exports = {
         }
     }
     showWinnerCells: function(cell, direction){
-        var directions = [[0,0], [-1,0], [0,1], [-1,1], [1, 1]];
+        var cells = document.getElementById('cells');
+        var directions = [[0,0], [-1,0], [0,1], [-1,1], [1, 1]];//shows speed of direction
+        var horCoord = cell.hor;
+        var verCoord = cell.ver;
         for (var i=0;i<4;i++){
-            cell.
+            horCoord = horCoord + directions[direction][0];
+            verCoord = verCoord + directions[direction][1];
+            for (var j=0;j<cells.length, j++){
+                if((cells[j].hor==horCoord)&&(cells[j].ver==verCoord)){
+                    cells[j].className = 'flash ' + cells[j].className;
+                }
+            }
         }
     }
 };
