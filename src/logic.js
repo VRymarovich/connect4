@@ -6,11 +6,11 @@ module.exports = {
             return 1;
         }
     },
-    checkField: function(field, playerId, players, targetCell){
+    checkField: function(field, playerId, playerValues, targetCell){
         var cell = targetCell;
         var hor = parseInt(cell.hor.value)-1;
         var ver = parseInt(cell.ver.value)-1;
-        var value = players[playerId].value * 4;
+        var value = playerValues[playerId] * 4;
         var sum1 = getFCV(field, hor, ver) + getFCV(field, hor+1, ver) + getFCV(field, hor+2, ver) + getFCV(field, hor+3, ver);
         var sum2 = getFCV(field, hor, ver) + getFCV(field, hor-1, ver) + getFCV(field, hor-2, ver) + getFCV(field, hor-3, ver);
         var sum3 = getFCV(field, hor, ver) + getFCV(field, hor, ver+1) + getFCV(field, hor, ver+2) + getFCV(field, hor, ver+3);
