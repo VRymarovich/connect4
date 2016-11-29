@@ -33,11 +33,13 @@ function click(event){
         event.target.className = options.players[player].color + ' cell';
         event.target.setAttribute('busy', options.players[player].color);
         field[event.target.attributes.ver.value-1][event.target.attributes.hor.value-1] = playerValues[player];
-        if(logic.checkField(field, player, options.players, event.target.attributes)){
-            document.getElementById('content').innerHTML = 'Player '+options.players[player].name+' wins!';
-        }else{
+        var fieldStatus = logic.checkField(field, player, options.players, event.target.attributes);
+        if(fieldStatus==0){
             player = logic.changePlayer(player);
             logic.updateField(event.target, cells);
+        }else{
+            document.getElementById('content').innerHTML = 'Player '+options.players[player].name+' wins!';
+            logic.showWinnerCells(event.target, fieldStatus);
         }
     }
 }
