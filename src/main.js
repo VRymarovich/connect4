@@ -32,9 +32,8 @@ function click(event){
     if(event.target.attributes.busy.value=='free'){
         event.target.className = options.players[player].color + ' cell';
         event.target.setAttribute('busy', options.players[player].color);
-        event.target.setAttribute('player', playerValues[player]);
         field[event.target.attributes.ver.value-1][event.target.attributes.hor.value-1] = playerValues[player];
-        if(logic.checkField(field, options.players, event.target.attributes)){
+        if(logic.checkField(field, player, options.players, event.target.attributes)){
             document.getElementById('content').innerHTML = 'Player '+options.players[player].name+' wins!';
         }else{
             player = logic.changePlayer(player);
