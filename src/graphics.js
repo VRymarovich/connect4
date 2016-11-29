@@ -26,7 +26,28 @@ module.exports = {
                 document.getElementById('cells').appendChild(cell);
             }
         }
-    }
+    },
+    updateField: function (cell){
+        var cells = document.getElementById('cells');
+        for(var i=0;i<cells.length;i++){
+            if((cells[i].attributes.ver.value == cell.attributes.ver.value - 1)&&(cells[i].attributes.hor.value == cell.attributes.hor.value)){
+                 cells[i].setAttribute('busy', 'free');
+                 cells[i].className = 'available cell';
+            }
+        }
+    },
+    setInitialField: function(ver){
+        var cells = document.getElementById('cells');
+        for(var i=0;i<cells.length;i++){
+            if(cells[i].attributes.ver.value==ver){
+                cells[i].setAttribute('busy', 'free');
+                cells[i].className = 'available cell';
+            }else{
+                cells[i].setAttribute('busy', 'na');
+                cells[i].className = 'na cell';
+            }
+        }
+    },
     showWinnerCells: function(cell, direction){
         var cells = document.getElementById('cells');
         var directions = [[0,0], [-1,0], [0,1], [-1,1], [1, 1]];//shows speed of direction
@@ -36,7 +57,7 @@ module.exports = {
             horCoord = horCoord + directions[direction][0];
             verCoord = verCoord + directions[direction][1];
             for (var j=0;j<cells.length, j++){
-                if((cells[j].hor==horCoord)&&(cells[j].ver==verCoord)){
+                if((cells[j].attributes.hor.value==horCoord)&&(cells[j].attributes.ver.value==verCoord)){
                     cells[j].className = 'flash ' + cells[j].className;
                 }
             }
