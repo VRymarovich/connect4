@@ -27,4 +27,10 @@ module.exports = {
             }
         }
     }
+    showWinnerCells: function(cell, direction){
+        var directions = [[0,0], [-1,0], [0,1], [-1,1], [1, 1]];
+        for (var i=0;i<4;i++){
+            cell.
+        }
+    }
 };
