@@ -15,7 +15,7 @@ graphics.loadGraphics(options.horizontal,options.vertical);
 //generate field array
 var field=logic.generateField(options.horizontal,options.vertical);
 //add events
-addEventListeners();
+graphics.addEventListeners();
 
 //set initial field state
 var player = 0;
