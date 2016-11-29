@@ -27,6 +27,14 @@ module.exports = {
             }
         }
     },
+    addEventListeners: function(){
+        var cells = document.getElementById('cells');
+        for(var i=0;i<cells.length;i++){
+            cells[i].addEventListener('mouseover', mouseOver);
+            cells[i].addEventListener('click', click);
+        };
+        document.getElementById('restart').addEventListener('click', restart);
+    },
     updateField: function (cell){
         var cells = document.getElementById('cells');
         for(var i=0;i<cells.length;i++){
