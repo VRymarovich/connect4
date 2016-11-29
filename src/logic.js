@@ -6,25 +6,6 @@ module.exports = {
             return 1;
         }
     },
-    updateField: function (cell, cells){
-        for(var i=0;i<cells.length;i++){
-            if((cells[i].attributes.ver.value == cell.attributes.ver.value - 1)&&(cells[i].attributes.hor.value == cell.attributes.hor.value)){
-                 cells[i].setAttribute('busy', 'free');
-                 cells[i].className = 'available cell';
-            }
-        }
-    },
-    setInitialField: function(cells, ver){
-        for(var i=0;i<cells.length;i++){
-            if(cells[i].attributes.ver.value==ver){
-                cells[i].setAttribute('busy', 'free');
-                cells[i].className = 'available cell';
-            }else{
-                cells[i].setAttribute('busy', 'na');
-                cells[i].className = 'na cell';
-            }
-        }
-    },
     checkField: function(field, playerId, players, targetCell){
         var cell = targetCell;
         var hor = parseInt(cell.hor.value)-1;
