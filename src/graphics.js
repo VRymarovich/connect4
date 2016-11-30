@@ -11,7 +11,7 @@ module.exports = {
                                     '<td id="result" class="result"><span style="">0/0</td></td>'+
                                     '<td style="float:right"><div class="yellow cell"></div></td>'+
                                     '</tr>'+
-                                </table>'+
+                                '</table>'+
                                 '<table id="cells"></table>'+
                             '</div>'+
                         '</div>';
