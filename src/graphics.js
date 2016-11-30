@@ -6,12 +6,12 @@ module.exports = {
                             '<div style="text-align:center"><button id="restart" class="button">Restart</button>'+
                             '<button id="reset" class="button">Reset Score</button></div>'+
                             '<div id="field">'+
-                                    '<table style="width:100%"><tr>'+
-                                        '<td><div class="red cell"></div></td>'+
-                                        '<td id="result" class="result"><span style="">0/0</td></td>'+
-                                        '<td style="float:right"><div class="yellow cell"></div></td>'+
-                                        '</tr>'+
-                                    </table>'+
+                                '<table style="width:100%"><tr>'+
+                                    '<td><div class="red cell"></div></td>'+
+                                    '<td id="result" class="result"><span style="">0/0</td></td>'+
+                                    '<td style="float:right"><div class="yellow cell"></div></td>'+
+                                    '</tr>'+
+                                </table>'+
                                 '<table id="cells"></table>'+
                             '</div>'+
                         '</div>';
