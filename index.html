@@ -7,5 +7,13 @@
   <body>
     <div id="connect4"></div>
     <script src="dist/connect4.js" type="text/javascript"></script>
+    <script>
+      var Connect4 = require('./dist/connect4.js');
+      var options = {
+        
+      };
+      var connect4 = new Connect4(options);
+      connect4.start();
+    </script>
   </body>
 </html>
