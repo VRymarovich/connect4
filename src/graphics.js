@@ -7,28 +7,30 @@ module.exports = {
                             '<button id="reset" class="button">Reset Score</button></div>'+
                             '<div id="field">'+
                                     '<table style="width:100%"><tr>'+
-                                    '<td><div class="red cell"></div></td>'+
-                                    '<td id="result" class="result"><span style="">10/11</td></td>'+
-                                    '<td style="float:right"><div class="yellow cell"></div></td>'+
-                                    '</tr></table>'+
-                                '<div id="cells"></div>'+
+                                        '<td><div class="red cell"></div></td>'+
+                                        '<td id="result" class="result"><span style="">0/0</td></td>'+
+                                        '<td style="float:right"><div class="yellow cell"></div></td>'+
+                                        '</tr>'+
+                                    </table>'+
+                                '<table id="cells"></table>'+
                             '</div>'+
                         '</div>';
         var connect4 = document.getElementById('connect4');
         connect4.innerHTML = html;
         
         for(var i=0;i<ver;i++){
+            var tr = document.createElement('tr');
             for(var j=0; j<hor; j++){
+                var td = document.createElement('td');
                 var cell = document.createElement('div');
                 cell.setAttribute('class','cell');
                 cell.setAttribute('ver', i+1);
                 cell.setAttribute('hor', j+1);
-                cell.setAttribute('id','cell_'+i+1+'_'+j+1);
-                //cell.style.position = 'absolute';
-                //cell.style.top = iy + j*45+'px';
-                //cell.style.left = ix + i*45+'px';
-                document.getElementById('cells').appendChild(cell);
+                cell.setAttribute('id','cell_'+parseInt(j+1)+'_'+parseInt(i+1));
+                tr.appendChild(td);
+                td.appendChild(cell);
             }
+            document.getElementById('cells').appendChild(tr);
         }
     },
     addEventListenersToCells: function(mouseOver, click){
