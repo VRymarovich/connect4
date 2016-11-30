@@ -2,10 +2,18 @@
 <html>
   <head>
     <title>Connect4</title>
-    <link rel="stylesheet" href="src/main.css">
+    <link rel="stylesheet" href="dist/connect4.css">
   </head>
   <body>
     <div id="connect4"></div>
     <script src="dist/connect4.js" type="text/javascript"></script>
+    <script>
+      var options = {'horizontal': 7, 'vertical': 6,'players': 
+                   [{'name':'Red', 'color':'red'}, {'name':'Yellow', 'color':'yellow'}]};
+      //var connect4 = new Connect4(options);
+      //connect4.start();
+        var connect4 = new Connect4(options);
+        connect4.start();
+    </script>
   </body>
 </html>
