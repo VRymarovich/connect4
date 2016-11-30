@@ -7,7 +7,6 @@ function Connect4(userOptions) {
     if(userOptions!=undefined){
         options = userOptions;
     }
-
 };
 
 Connect4.prototype.start = function() {
@@ -28,6 +27,7 @@ var field = [];
 var player = 0;
 var options = {'horizontal': 7, 'vertical': 6,'players': 
                    [{'name':'SuperMan', 'color':'red'}, {'name':'IronMan', 'color':'yellow'}]};
+
 
 //events
 function mouseOver(event){

@@ -26,7 +26,7 @@ module.exports = {
                 cell.setAttribute('class','cell');
                 cell.setAttribute('ver', i+1);
                 cell.setAttribute('hor', j+1);
-                cell.setAttribute('id','cell');
+                cell.setAttribute('id','cell_'+parseInt(j+1)+'_'+parseInt(i+1));
                 tr.appendChild(td);
                 td.appendChild(cell);
             }

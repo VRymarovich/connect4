@@ -2,7 +2,7 @@
   "name": "connect4",
   "version": "1.0.0",
   "description": "connect 4 game in browser",
-  "main": "index.html",
+  "main": "dist/connect4.js",
   "scripts": {
     "build:css": "stylus src/main.css -o dist/connect4.css",
     "build:js": "browserify --s Connect4 src/main.js -o dist/connect4.js",
