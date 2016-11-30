@@ -1,7 +1,22 @@
 var graphics = require('./graphics.js');
 var logic = require('./logic.js');
 
-
+var Connect4 = function(options){
+    if(options!=undefined){
+        this.options = options;
+    }
+    //load field, cells
+    graphics.loadGraphics(options.horizontal,options.vertical);
+    //generate field array
+    field = logic.generateField(options.horizontal,options.vertical);
+    //add events
+    graphics.addEventListenersToButtons(restart, reset);
+}
+Connect4.prototype.start = function(){
+    //set initial field state and texts
+    start();
+}
+module.export = Connect4;
 
 var options = {
     "horizontal": 7,
@@ -11,17 +26,6 @@ var options = {
 var playerValues = [-1,1];
 var score = [0,0];
 var field = [];
-
-//load field, cells
-graphics.loadGraphics(options.horizontal,options.vertical);
-
-//generate field array
-field = logic.generateField(options.horizontal,options.vertical);
-
-//add events
-graphics.addEventListenersToButtons(restart, reset);
-//set initial field state and texts
-start();
 
 //events
 function mouseOver(event){
