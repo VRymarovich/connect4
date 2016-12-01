@@ -12,7 +12,9 @@ Or download the library from the github project: https://github.com/VRymarovich/
 ##Start game
 
 To start game add this tag with `id="connect"`:
-`<div id="connect4"></div>`
+`<div id="connect4"></div>`.
+
+
 Then inside the `<script>` tag add the following code:
 
 ```javascript
