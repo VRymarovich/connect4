@@ -23,3 +23,7 @@ var options = {'horizontal': 7,
 var connect4 = new Connect4(options);
 connect4.start();
 ```
+##Example
+
+See working example at:
+https://jsfiddle.net/vaskaroman/oe8e9sz9/embed/result/
