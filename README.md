@@ -16,7 +16,10 @@ To start game add this tag with `id="connect"`:
 Then inside the `<script>` tag add the following code:
 
 ```javascript
-var options = {'horizontal': 7, 'vertical': 6,'players': [{'name':'Ironman', 'color':'red'}, {'name':'Superman', 'color':'yellow'}]};
+var options = {'horizontal': 7,
+                'vertical': 6,
+                'players': [{'name':'Ironman', 'color':'red'}, 
+                            {'name':'Superman', 'color':'yellow'}]};
 var connect4 = new Connect4(options);
 connect4.start();
 ```
