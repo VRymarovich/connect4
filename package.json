@@ -1,6 +1,6 @@
 {
   "name": "connect-4",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "connect 4 game in browser",
   "main": "dist/connect4.js",
   "scripts": {

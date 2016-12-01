@@ -67,31 +67,31 @@
 29 silly publish      watchify: '^3.7.0' },
 29 silly publish   readme: '##Connect4\r\n\r\nConnect4 is a web version of a very famous logical board game.\r\n##Install\r\n\r\nTo install the game use the following npm package:\r\n\r\n`$ npm install connect-4`\r\n\r\nOr download the library from the github project: https://github.com/VRymarovich/connect4.git.\r\n\r\n##Start game\r\n\r\nTo start game add this tag with `id="connect"`:\r\n`<div id="connect4"></div>`.\r\n\r\n\r\nThen inside the `<script>` tag add the following code:\r\n\r\n```javascript\r\nvar options = {\'horizontal\': 7,\r\n                \'vertical\': 6,\r\n                \'players\': [{\'name\':\'Ironman\', \'color\':\'red\'}, \r\n                            {\'name\':\'Superman\', \'color\':\'yellow\'}]};\r\nvar connect4 = new Connect4(options);\r\nconnect4.start();\r\n```\r\n##Options\r\n\r\nOptions consist of the following attributes:\r\n\r\n\r\n1. `\'horizontal\'` - defines the number of columns in the field.\r\n\r\n\r\n2. `\'vertical\'` - defines the number of rows in the field.\r\n\r\n\r\n3. `\'players\'`. This object defines the names of the players which are displayed in the field and its cells color. If you change the name of the color you should also create new class in css file `connect4.css`\r\n\r\n\r\n##Example\r\n\r\nSee working example at:\r\nhttps://vrymarovich.github.io/\r\n',
 29 silly publish   readmeFilename: 'README.md',
-29 silly publish   gitHead: '6f6aa0c5a52b8e90115a55168196a8cb3adc3151',
+29 silly publish   gitHead: 'c6b2b574585143ef3d8022bfc6ec05e18e106cc3',
 29 silly publish   _id: 'connect-4@1.0.0',
-29 silly publish   _shasum: '7d99bac390b1dc52bc37153bf5dcf845cafcda23',
+29 silly publish   _shasum: 'd1f240aac931fa641a160dcea9c2a4952cb139e2',
 29 silly publish   _from: '.' }
 30 verbose request where is /connect-4
 31 verbose request registry https://registry.npmjs.org/
-32 verbose request id bd947fb80cd0c072
+32 verbose request id 9820f61fd6fc8138
 33 verbose url raw /connect-4
 34 verbose url resolving [ 'https://registry.npmjs.org/', './connect-4' ]
 35 verbose url resolved https://registry.npmjs.org/connect-4
 36 verbose request where is https://registry.npmjs.org/connect-4
-37 info trying registry request attempt 1 at 21:31:27
+37 info trying registry request attempt 1 at 21:42:20
 38 http PUT https://registry.npmjs.org/connect-4
 39 http 403 https://registry.npmjs.org/connect-4
 40 verbose headers { 'content-type': 'application/json',
 40 verbose headers   'cache-control': 'max-age=300',
 40 verbose headers   'content-length': '95',
 40 verbose headers   'accept-ranges': 'bytes',
-40 verbose headers   date: 'Thu, 01 Dec 2016 18:31:43 GMT',
+40 verbose headers   date: 'Thu, 01 Dec 2016 18:42:36 GMT',
 40 verbose headers   via: '1.1 varnish',
 40 verbose headers   connection: 'keep-alive',
-40 verbose headers   'x-served-by': 'cache-fra1230-FRA',
+40 verbose headers   'x-served-by': 'cache-fra1231-FRA',
 40 verbose headers   'x-cache': 'MISS',
 40 verbose headers   'x-cache-hits': '0',
-40 verbose headers   'x-timer': 'S1480617102.443271,VS0,VE1225',
+40 verbose headers   'x-timer': 'S1480617755.106288,VS0,VE1238',
 40 verbose headers   vary: 'Accept-Encoding' }
 41 error publish Failed PUT 403
 42 error Error: "You cannot publish over the previously published version 1.0.0." : connect-4
