@@ -13,3 +13,11 @@ Or download the library from the github project: https://github.com/VRymarovich/
 
 To start game add this tag with `id="connect"`:
 `<div id="connect4"></div>`
+Then inside the `<script>` tag add the following code:
+
+```javascript
+var options = {'horizontal': 7, 'vertical': 6,'players': 
+                   [{'name':'Red', 'color':'red'}, {'name':'Yellow', 'color':'yellow'}]};
+      var connect4 = new Connect4(options);
+      connect4.start();
+```
