@@ -1,30 +1,116 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
 1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'run',
-1 verbose cli   'watch' ]
+1 verbose cli   'publish' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
 4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
-5 verbose run-script [ 'prewatch', 'watch', 'postwatch' ]
-6 info prewatch connect4@1.0.0
-7 info watch connect4@1.0.0
-8 verbose unsafe-perm in lifecycle true
-9 info connect4@1.0.0 Failed to exec watch script
-10 error connect4@1.0.0 watch: `npm run watch:css && npm run watch:js`
-10 error Exit status 1
-11 error Failed at the connect4@1.0.0 watch script.
-11 error This is most likely a problem with the connect4 package,
-11 error not with npm itself.
-11 error Tell the author that this fails on your system:
-11 error     npm run watch:css && npm run watch:js
-11 error You can get their info via:
-11 error     npm owner ls connect4
-11 error There is likely additional logging output above.
-12 error System Windows_NT 6.2.9200
-13 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "watch"
-14 error cwd C:\work\connect4
-15 error node -v v0.10.33
-16 error npm -v 1.4.28
-17 error code ELIFECYCLE
-18 verbose exit [ 1, true ]
+5 verbose publish [ '.' ]
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . C:\Users\Vasiliy\AppData\Roaming\npm-cache\3a52ce78-.lock
+11 verbose tar pack [ 'C:\\Users\\Vasiliy\\AppData\\Roaming\\npm-cache\\connect4\\1.0.0\\package.tgz',
+11 verbose tar pack   '.' ]
+12 verbose tarball C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect4\1.0.0\package.tgz
+13 verbose folder .
+14 info prepublish connect4@1.0.0
+15 silly lockFile 1f1177db-tar tar://.
+16 verbose lock tar://. C:\Users\Vasiliy\AppData\Roaming\npm-cache\1f1177db-tar.lock
+17 silly lockFile 20eab1d2-cache-connect4-1-0-0-package-tgz tar://C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect4\1.0.0\package.tgz
+18 verbose lock tar://C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect4\1.0.0\package.tgz C:\Users\Vasiliy\AppData\Roaming\npm-cache\20eab1d2-cache-connect4-1-0-0-package-tgz.lock
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 1f1177db-tar tar://.
+21 silly lockFile 20eab1d2-cache-connect4-1-0-0-package-tgz tar://C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect4\1.0.0\package.tgz
+22 silly lockFile 20eab1d2-cache-connect4-1-0-0-package-tgz tar://C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect4\1.0.0\package.tgz
+23 silly lockFile b39d0bb2-npm-cache-connect4-1-0-0-package C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect4\1.0.0\package
+24 verbose lock C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect4\1.0.0\package C:\Users\Vasiliy\AppData\Roaming\npm-cache\b39d0bb2-npm-cache-connect4-1-0-0-package.lock
+25 silly lockFile b39d0bb2-npm-cache-connect4-1-0-0-package C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect4\1.0.0\package
+26 silly lockFile b39d0bb2-npm-cache-connect4-1-0-0-package C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect4\1.0.0\package
+27 silly lockFile 3a52ce78- .
+28 silly lockFile 3a52ce78- .
+29 silly publish { name: 'connect4',
+29 silly publish   version: '1.0.0',
+29 silly publish   description: 'connect 4 game in browser',
+29 silly publish   main: 'dist/connect4.js',
+29 silly publish   scripts:
+29 silly publish    { 'build:css': 'stylus src/main.css -o dist/connect4.css',
+29 silly publish      'build:js': 'browserify --s Connect4 src/main.js -o dist/connect4.js',
+29 silly publish      'watch:css': 'stylus -w src/main.css -o dist/connect4.css',
+29 silly publish      'watch:js': 'watchify --s Connect4 src/main.js -o dist/connect4.js -d',
+29 silly publish      build: 'npm run build:css && npm run build:js',
+29 silly publish      watch: 'npm run watch:css && npm run watch:js' },
+29 silly publish   repository:
+29 silly publish    { type: 'git',
+29 silly publish      url: 'https://github.com/VRymarovich/connect4.git' },
+29 silly publish   keywords: [ 'connect4', 'game' ],
+29 silly publish   author: { name: 'RymarovichV' },
+29 silly publish   license: 'MIT',
+29 silly publish   bugs: { url: 'https://github.com/VRymarovich/connect4/issues' },
+29 silly publish   homepage: 'https://github.com/VRymarovich/connect4',
+29 silly publish   devDependencies:
+29 silly publish    { browserify: '^13.1.1',
+29 silly publish      'browserify-css': '^0.9.2',
+29 silly publish      stylus: '^0.54.5',
+29 silly publish      watchify: '^3.7.0' },
+29 silly publish   readme: 'Connect4\r\nConnect4 is a web version of a very famous logical game.\r\n',
+29 silly publish   readmeFilename: 'README.md',
+29 silly publish   gitHead: '960be9072ca5fc2c37824dea937be3eeefebb3a6',
+29 silly publish   _id: 'connect4@1.0.0',
+29 silly publish   _shasum: '0ed39f8c6a8add66ec5e6798fb8405bab863be32',
+29 silly publish   _from: '.' }
+30 verbose request where is /connect4
+31 verbose request registry https://registry.npmjs.org/
+32 verbose request id d06843841ec8e449
+33 verbose url raw /connect4
+34 verbose url resolving [ 'https://registry.npmjs.org/', './connect4' ]
+35 verbose url resolved https://registry.npmjs.org/connect4
+36 verbose request where is https://registry.npmjs.org/connect4
+37 info trying registry request attempt 1 at 23:53:35
+38 http PUT https://registry.npmjs.org/connect4
+39 http 403 https://registry.npmjs.org/connect4
+40 verbose headers { 'content-type': 'application/json',
+40 verbose headers   'cache-control': 'max-age=300',
+40 verbose headers   'content-length': '102',
+40 verbose headers   'accept-ranges': 'bytes',
+40 verbose headers   date: 'Wed, 30 Nov 2016 20:53:49 GMT',
+40 verbose headers   via: '1.1 varnish',
+40 verbose headers   connection: 'keep-alive',
+40 verbose headers   'x-served-by': 'cache-fra1236-FRA',
+40 verbose headers   'x-cache': 'MISS',
+40 verbose headers   'x-cache-hits': '0',
+40 verbose headers   'x-timer': 'S1480539228.279528,VS0,VE1032',
+40 verbose headers   vary: 'Accept-Encoding' }
+41 error publish Failed PUT 403
+42 error Error: you do not have permission to publish "connect4". Are you logged in as the correct user? : connect4
+42 error     at RegClient.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:308:14)
+42 error     at Request._callback (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:246:65)
+42 error     at Request.self.callback (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:236:22)
+42 error     at Request.emit (events.js:98:17)
+42 error     at Request.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:1142:14)
+42 error     at Request.emit (events.js:117:20)
+42 error     at IncomingMessage.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:1096:12)
+42 error     at IncomingMessage.emit (events.js:117:20)
+42 error     at _stream_readable.js:943:16
+42 error     at process._tickCallback (node.js:419:13)
+43 error If you need help, you may report this *entire* log,
+43 error including the npm and node versions, at:
+43 error     <http://github.com/npm/npm/issues>
+44 error System Windows_NT 6.2.9200
+45 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+46 error cwd C:\work\connect4
+47 error node -v v0.10.33
+48 error npm -v 1.4.28
+49 verbose exit [ 1, true ]
