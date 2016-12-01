@@ -26,4 +26,4 @@ connect4.start();
 ##Example
 
 See working example at:
-https://jsfiddle.net/vaskaroman/oe8e9sz9/embed/result/
+https://jsfiddle.net/vaskaroman/oe8e9sz9/
