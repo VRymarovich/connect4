@@ -38,7 +38,6 @@ Options consist of the following attributes:
 
 3. `'players'`. This object defines the names of the players which are displayed in the field and its cells color. If you change the name of the color you should also create new class in css file `connect4.css`
 
-You may omit option settings
 
 ##Example
 
