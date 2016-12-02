@@ -145,8 +145,8 @@ module.exports = {
             if(sum3==value) return 3;
             if(sum4==value) return 4;
             if(sum5==value) return 5;
-            if(sum6==value) return 4;
-            if(sum7==value) return 5;
+            if(sum6==value) return 6;
+            if(sum7==value) return 7;
         }else{
             return 0;
         }
