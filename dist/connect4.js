@@ -98,7 +98,7 @@ module.exports = {
     },
     showWinnerCells: function(targetCell, direction){
         var rows = document.getElementById('cells').rows;
-        var directions = [[0,0], [1,0], [-1,0], [0,1], [1,1], [-1,1]];//shows speed of direction
+        var directions = [[0,0], [1,0], [-1,0], [0,1], [1,1], [-1,1], [1,-1], [-1,-1]];//shows speed of direction
         var horCoord = parseInt(targetCell.attributes.hor.value);
         var verCoord = parseInt(targetCell.attributes.ver.value);
         
@@ -137,13 +137,16 @@ module.exports = {
         var sum3 = getFCV(field, hor, ver) + getFCV(field, hor, ver+1) + getFCV(field, hor, ver+2) + getFCV(field, hor, ver+3);
         var sum4 = getFCV(field, hor, ver) + getFCV(field, hor+1, ver+1) + getFCV(field, hor+2, ver+2) + getFCV(field, hor+3, ver+3);
         var sum5 = getFCV(field, hor, ver) + getFCV(field, hor-1, ver+1) + getFCV(field, hor-2, ver+2) + getFCV(field, hor-3, ver+3);
-
-        if((sum1==value)||(sum2==value)||(sum3==value)||(sum4==value)||(sum5==value)){
+        var sum6 = getFCV(field, hor, ver) + getFCV(field, hor+1, ver-1) + getFCV(field, hor+2, ver-2) + getFCV(field, hor+3, ver-3);
+        var sum7 = getFCV(field, hor, ver) + getFCV(field, hor-1, ver-1) + getFCV(field, hor-2, ver-2) + getFCV(field, hor-3, ver-3);
+        if((sum1==value)||(sum2==value)||(sum3==value)||(sum4==value)||(sum5==value)||(sum6==value)||(sum7==value)){
             if(sum1==value) return 1;
             if(sum2==value) return 2;
             if(sum3==value) return 3;
             if(sum4==value) return 4;
             if(sum5==value) return 5;
+            if(sum6==value) return 4;
+            if(sum7==value) return 5;
         }else{
             return 0;
         }
