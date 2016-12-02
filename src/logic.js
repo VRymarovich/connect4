@@ -19,7 +19,7 @@ module.exports = {
         var sum6 = getFCV(field, hor, ver) + getFCV(field, hor+1, ver-1) + getFCV(field, hor+2, ver-2) + getFCV(field, hor+3, ver-3);
         var sum7 = getFCV(field, hor, ver) + getFCV(field, hor-1, ver-1) + getFCV(field, hor-2, ver-2) + getFCV(field, hor-3, ver-3);
 
-        if((sum1==value)||(sum2==value)||(sum3==value)||(sum4==value)||(sum5==value)){
+        if((sum1==value)||(sum2==value)||(sum3==value)||(sum4==value)||(sum5==value)||(sum6==value)||(sum7==value)){
             if(sum1==value) return 1;
             if(sum2==value) return 2;
             if(sum3==value) return 3;
