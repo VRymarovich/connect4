@@ -97,7 +97,7 @@ module.exports = {
     },
     showWinnerCells: function(targetCell, direction){
         var rows = document.getElementById('cells').rows;
-        var directions = [[0,0], [1,0], [-1,0], [0,1], [1,1], [-1,1]];//shows speed of direction
+        var directions = [[0,0], [1,0], [-1,0], [0,1], [1,1], [-1,1], [1,-1], [-1,-1]];//shows speed of direction
         var horCoord = parseInt(targetCell.attributes.hor.value);
         var verCoord = parseInt(targetCell.attributes.ver.value);
         
