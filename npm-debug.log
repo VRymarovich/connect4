@@ -22,27 +22,27 @@
 8 verbose parsed url   href: '.' }
 9 silly lockFile 3a52ce78- .
 10 verbose lock . C:\Users\Vasiliy\AppData\Roaming\npm-cache\3a52ce78-.lock
-11 verbose tar pack [ 'C:\\Users\\Vasiliy\\AppData\\Roaming\\npm-cache\\connect-4\\1.0.0\\package.tgz',
+11 verbose tar pack [ 'C:\\Users\\Vasiliy\\AppData\\Roaming\\npm-cache\\connect-4\\1.0.1\\package.tgz',
 11 verbose tar pack   '.' ]
-12 verbose tarball C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.0\package.tgz
+12 verbose tarball C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.1\package.tgz
 13 verbose folder .
-14 info prepublish connect-4@1.0.0
+14 info prepublish connect-4@1.0.1
 15 silly lockFile 1f1177db-tar tar://.
 16 verbose lock tar://. C:\Users\Vasiliy\AppData\Roaming\npm-cache\1f1177db-tar.lock
-17 silly lockFile daf3c8a9-ache-connect-4-1-0-0-package-tgz tar://C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.0\package.tgz
-18 verbose lock tar://C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.0\package.tgz C:\Users\Vasiliy\AppData\Roaming\npm-cache\daf3c8a9-ache-connect-4-1-0-0-package-tgz.lock
+17 silly lockFile a7d6126f-ache-connect-4-1-0-1-package-tgz tar://C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.1\package.tgz
+18 verbose lock tar://C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.1\package.tgz C:\Users\Vasiliy\AppData\Roaming\npm-cache\a7d6126f-ache-connect-4-1-0-1-package-tgz.lock
 19 silly lockFile 1f1177db-tar tar://.
 20 silly lockFile 1f1177db-tar tar://.
-21 silly lockFile daf3c8a9-ache-connect-4-1-0-0-package-tgz tar://C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.0\package.tgz
-22 silly lockFile daf3c8a9-ache-connect-4-1-0-0-package-tgz tar://C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.0\package.tgz
-23 silly lockFile e504eb2b-pm-cache-connect-4-1-0-0-package C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.0\package
-24 verbose lock C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.0\package C:\Users\Vasiliy\AppData\Roaming\npm-cache\e504eb2b-pm-cache-connect-4-1-0-0-package.lock
-25 silly lockFile e504eb2b-pm-cache-connect-4-1-0-0-package C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.0\package
-26 silly lockFile e504eb2b-pm-cache-connect-4-1-0-0-package C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.0\package
+21 silly lockFile a7d6126f-ache-connect-4-1-0-1-package-tgz tar://C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.1\package.tgz
+22 silly lockFile a7d6126f-ache-connect-4-1-0-1-package-tgz tar://C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.1\package.tgz
+23 silly lockFile 57c483e6-pm-cache-connect-4-1-0-1-package C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.1\package
+24 verbose lock C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.1\package C:\Users\Vasiliy\AppData\Roaming\npm-cache\57c483e6-pm-cache-connect-4-1-0-1-package.lock
+25 silly lockFile 57c483e6-pm-cache-connect-4-1-0-1-package C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.1\package
+26 silly lockFile 57c483e6-pm-cache-connect-4-1-0-1-package C:\Users\Vasiliy\AppData\Roaming\npm-cache\connect-4\1.0.1\package
 27 silly lockFile 3a52ce78- .
 28 silly lockFile 3a52ce78- .
 29 silly publish { name: 'connect-4',
-29 silly publish   version: '1.0.0',
+29 silly publish   version: '1.0.1',
 29 silly publish   description: 'connect 4 game in browser',
 29 silly publish   main: 'dist/connect4.js',
 29 silly publish   scripts:
@@ -67,34 +67,34 @@
 29 silly publish      watchify: '^3.7.0' },
 29 silly publish   readme: '##Connect4\r\n\r\nConnect4 is a web version of a very famous logical board game.\r\n##Install\r\n\r\nTo install the game use the following npm package:\r\n\r\n`$ npm install connect-4`\r\n\r\nOr download the library from the github project: https://github.com/VRymarovich/connect4.git.\r\n\r\n##Start game\r\n\r\nTo start game add this tag with `id="connect"`:\r\n`<div id="connect4"></div>`.\r\n\r\n\r\nThen inside the `<script>` tag add the following code:\r\n\r\n```javascript\r\nvar options = {\'horizontal\': 7,\r\n                \'vertical\': 6,\r\n                \'players\': [{\'name\':\'Ironman\', \'color\':\'red\'}, \r\n                            {\'name\':\'Superman\', \'color\':\'yellow\'}]};\r\nvar connect4 = new Connect4(options);\r\nconnect4.start();\r\n```\r\n##Options\r\n\r\nOptions consist of the following attributes:\r\n\r\n\r\n1. `\'horizontal\'` - defines the number of columns in the field.\r\n\r\n\r\n2. `\'vertical\'` - defines the number of rows in the field.\r\n\r\n\r\n3. `\'players\'`. This object defines the names of the players which are displayed in the field and its cells color. If you change the name of the color you should also create new class in css file `connect4.css`\r\n\r\n\r\n##Example\r\n\r\nSee working example at:\r\nhttps://vrymarovich.github.io/\r\n',
 29 silly publish   readmeFilename: 'README.md',
-29 silly publish   gitHead: 'c6b2b574585143ef3d8022bfc6ec05e18e106cc3',
-29 silly publish   _id: 'connect-4@1.0.0',
-29 silly publish   _shasum: 'd1f240aac931fa641a160dcea9c2a4952cb139e2',
+29 silly publish   gitHead: '64458402b059105a9ea5b5b16cd10bcd7dddf247',
+29 silly publish   _id: 'connect-4@1.0.1',
+29 silly publish   _shasum: '85acb8d77b86b9a9fc20f46bba0a8a646709a2bb',
 29 silly publish   _from: '.' }
 30 verbose request where is /connect-4
 31 verbose request registry https://registry.npmjs.org/
-32 verbose request id 9820f61fd6fc8138
+32 verbose request id 9b065c242482eac8
 33 verbose url raw /connect-4
 34 verbose url resolving [ 'https://registry.npmjs.org/', './connect-4' ]
 35 verbose url resolved https://registry.npmjs.org/connect-4
 36 verbose request where is https://registry.npmjs.org/connect-4
-37 info trying registry request attempt 1 at 21:42:20
+37 info trying registry request attempt 1 at 15:03:38
 38 http PUT https://registry.npmjs.org/connect-4
 39 http 403 https://registry.npmjs.org/connect-4
 40 verbose headers { 'content-type': 'application/json',
 40 verbose headers   'cache-control': 'max-age=300',
 40 verbose headers   'content-length': '95',
 40 verbose headers   'accept-ranges': 'bytes',
-40 verbose headers   date: 'Thu, 01 Dec 2016 18:42:36 GMT',
+40 verbose headers   date: 'Sun, 04 Dec 2016 12:03:59 GMT',
 40 verbose headers   via: '1.1 varnish',
 40 verbose headers   connection: 'keep-alive',
-40 verbose headers   'x-served-by': 'cache-fra1231-FRA',
+40 verbose headers   'x-served-by': 'cache-fra1227-FRA',
 40 verbose headers   'x-cache': 'MISS',
 40 verbose headers   'x-cache-hits': '0',
-40 verbose headers   'x-timer': 'S1480617755.106288,VS0,VE1238',
+40 verbose headers   'x-timer': 'S1480853037.678463,VS0,VE1484',
 40 verbose headers   vary: 'Accept-Encoding' }
 41 error publish Failed PUT 403
-42 error Error: "You cannot publish over the previously published version 1.0.0." : connect-4
+42 error Error: "You cannot publish over the previously published version 1.0.1." : connect-4
 42 error     at RegClient.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:308:14)
 42 error     at Request._callback (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:246:65)
 42 error     at Request.self.callback (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:236:22)
