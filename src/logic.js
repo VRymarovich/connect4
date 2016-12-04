@@ -6,26 +6,78 @@ module.exports = {
             return 1;
         }
     },
-    checkField: function(field, playerId, playerValues, targetCell){
+    checkField: function(field, playerId, playerValues, targetCell, valueToWin){
         var cell = targetCell;
-        var hor = parseInt(cell.hor.value)-1;
-        var ver = parseInt(cell.ver.value)-1;
-        var value = playerValues[playerId] * 4;
-        var sum1 = getFCV(field, hor, ver) + getFCV(field, hor+1, ver) + getFCV(field, hor+2, ver) + getFCV(field, hor+3, ver);
-        var sum2 = getFCV(field, hor, ver) + getFCV(field, hor-1, ver) + getFCV(field, hor-2, ver) + getFCV(field, hor-3, ver);
-        var sum3 = getFCV(field, hor, ver) + getFCV(field, hor, ver+1) + getFCV(field, hor, ver+2) + getFCV(field, hor, ver+3);
-        var sum4 = getFCV(field, hor, ver) + getFCV(field, hor+1, ver+1) + getFCV(field, hor+2, ver+2) + getFCV(field, hor+3, ver+3);
-        var sum5 = getFCV(field, hor, ver) + getFCV(field, hor-1, ver+1) + getFCV(field, hor-2, ver+2) + getFCV(field, hor-3, ver+3);
-
-        if((sum1==value)||(sum2==value)||(sum3==value)||(sum4==value)||(sum5==value)){
-            if(sum1==value) return 1;
-            if(sum2==value) return 2;
-            if(sum3==value) return 3;
-            if(sum4==value) return 4;
-            if(sum5==value) return 5;
-        }else{
-            return 0;
+        var value = playerValues[playerId] * valueToWin;
+        var directions = [[1,0],//East
+                          [-1,0],//West
+                          [0,1],//South
+                          [1,1],//SouthEast
+                          [-1,1],//SouthWest
+                          [1,-1],//NorthEast
+                          [-1,-1]];//NorthWest
+        //shows speed of direction
+        directions.forEach(function(direction){
+            var hor = parseInt(cell.hor.value)-1;
+            var ver = parseInt(cell.ver.value)-1;
+            var sum = 0;
+            do{
+                hor = hor + direction[0];
+                ver = ver + direction[1];
+                if(getFCV(field, hor, ver)==playerValues[playerId])
+                sum = getFCV(field, hor, ver) + sum;
+            }
+            while (getFCV(field, hor, ver)==playerValues[playerId]);
+            direction[2] = Math.abs(sum);
+        });
+        var isWin = false;
+        if (directions[2][2]>=valueToWin-1) {//check South direction
+            directions[2][3]='w';
+            isWin = true;
+            
         }
+        if (directions[0][2]>=valueToWin-1){//check East direction
+            directions[0][3]='w';
+            isWin = true;
+        }
+        if (directions[1][2]>=valueToWin-1){//check West direction
+            directions[1][3]='w';
+            isWin = true;
+        }
+        if (directions[1][2] + directions[0][2]>=valueToWin-1){//check East and West directions
+            directions[0][3]='w';
+            directions[1][3]='w';
+            isWin = true;
+        }
+        
+        if (directions[4][2]>=valueToWin-1){//check SouthWest direction
+            directions[4][3]='w';
+            isWin = true;
+        }
+        if (directions[5][2]>=valueToWin-1){//check NorthEast direction
+            directions[5][3]='w';
+            isWin = true;
+        }
+        if (directions[4][2] + directions[5][2]>=valueToWin-1){//check NorthEast and SouthWest West directions
+            directions[4][3]='w';
+            directions[5][3]='w';
+            isWin = true;
+        }
+        
+        if (directions[6][2]>=valueToWin-1){//check NorthWest direction
+            directions[6][3]='w';
+            isWin = true;
+        }
+        if (directions[3][2]>=valueToWin-1){//check SouthEast direction
+            directions[3][3]='w';
+            isWin = true;
+        }
+        if (directions[6][2] + directions[3][2]>=valueToWin-1){//check NorthWest and SouthEast West directions
+            directions[6][3]='w';
+            directions[3][3]='w';
+            isWin = true;
+        }
+        return (isWin?directions:0);
     },
     generateField: function(hor, ver){
         var field = [];

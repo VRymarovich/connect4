@@ -1,4 +1,5 @@
 module.exports = {
+    //load all graphics of the field
     loadGraphics: function (hor, ver) {
         var html =     '<div id="page">'+
                             '<div style="text-align:center; font-family:Arial; color:white; font-size:32px;">Connect-4</div>'+
@@ -95,24 +96,26 @@ module.exports = {
         }
         
     },
-    showWinnerCells: function(targetCell, direction){
+    showWinnerCells: function(targetCell, directions){
         var rows = document.getElementById('cells').rows;
-        var directions = [[0,0], [1,0], [-1,0], [0,1], [1,1], [-1,1]];//shows speed of direction
-        var horCoord = parseInt(targetCell.attributes.hor.value);
-        var verCoord = parseInt(targetCell.attributes.ver.value);
-        
-        for (var c=0;c<4;c++){
-            for(var j=0;j<rows.length; j++){
-                var cells = rows[j].cells;
-                for(var i=0;i<cells.length;i++){
-                    var cell = cells[i].children[0];
-                    if((cell.attributes.hor.value==horCoord)&&(cell.attributes.ver.value==verCoord)){
-                        cell.className = 'flash ' + cell.className;
+        directions.forEach(function(direction){
+            var hor = parseInt(targetCell.attributes.hor.value);//get starting point
+            var ver = parseInt(targetCell.attributes.ver.value);
+            if(direction[3]=='w' && direction[2]>0){
+                for(var c=0; c<direction[2]+1; c++){
+                    for(var j=0;j<rows.length; j++){
+                        var cells = rows[j].cells;
+                        for(var i=0;i<cells.length;i++){
+                            var cell = cells[i].children[0];
+                            if((cell.attributes.hor.value==hor)&&(cell.attributes.ver.value==ver)){
+                                cell.className = 'flash ' + cell.className;
+                            }
+                        }
                     }
+                    hor = hor + direction[0];
+                    ver = ver + direction[1];
                 }
             }
-            horCoord = horCoord + directions[direction][0];
-            verCoord = verCoord + directions[direction][1];
-        }
+        })
     }
 };
